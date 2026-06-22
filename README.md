@@ -83,6 +83,15 @@ The publication, project, course, code, and citation records currently include c
 
 After an update, use `npm run dev` to review the site locally or `npm run build` to generate the production-ready static output.
 
+### Website images
+
+Optional static images are served from `public/images/`:
+
+- `public/images/profile.jpg` - academic portrait shown on the Home page and optionally on the About page.
+- `public/images/ktun-logo.png` - a subtle Konya Technical University logo shown in the header.
+
+Replace these files using the same filenames. If either image is absent, the site uses a safe text fallback and still builds normally.
+
 ## GitHub Pages deployment
 
 1. Commit and push the project to the `main` branch on GitHub.
