@@ -1,4 +1,3 @@
 [
-  { "year": 2015, "title": "Artificial Algae Algorithm (AAA): A Novel Metaheuristic Algorithm for Global Optimization", "note": "Placeholder bibliographic entry — replace with the canonical publication metadata." },
-  { "year": 2021, "title": "Applications of the Artificial Algae Algorithm in Optimization", "note": "Placeholder citation entry." }
+  { "year": 2015, "title": "Artificial algae algorithm (AAA) for nonlinear global optimization", "authors": "Uymaz, S. A., Tezel, G., & Yel, E.", "journal": "Applied Soft Computing", "volume": "31", "pages": "153-171", "doi": "10.1016/j.asoc.2015.03.003", "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494615001465", "note": "Original AAA publication." }
 ]
