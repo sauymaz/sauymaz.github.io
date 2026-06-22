@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import PageTitle from '../../components/PageTitle.astro'; import Section from '../../components/Section.astro';
+const bibtex = `@article{uymaz_aaa,
+  author  = {Uymaz, Sait Ali},
+  title   = {Artificial Algae Algorithm (AAA): A Novel Metaheuristic Algorithm for Global Optimization},
+  year    = {YYYY},
+  journal = {Journal name},
+  note    = {Replace this placeholder with canonical metadata}
+}`;
+const apa = 'Uymaz, S. A. (YYYY). Artificial Algae Algorithm (AAA): A novel metaheuristic algorithm for global optimization. Journal name.';
+const ieee = 'S. A. Uymaz, "Artificial Algae Algorithm (AAA): A Novel Metaheuristic Algorithm for Global Optimization," Journal name, YYYY.';
+---
+<BaseLayout title="How to Cite AAA"><PageTitle title="How to Cite AAA" description="Citation guidance for users of the Artificial Algae Algorithm." /><Section><div class="max-w-3xl space-y-6 leading-8"><p>When using AAA in research, please cite the original canonical publication. Verify the final authorship, venue, volume, pages, and DOI against the official publication record.</p>{[['APA', apa], ['IEEE', ieee], ['BibTeX', bibtex]].map(([format, text]) => <div><h2 class="mb-3 font-serif text-2xl font-bold text-navy-900">{format}</h2><pre class="overflow-x-auto rounded-lg bg-navy-900 p-5 text-sm leading-7 text-slate-100"><code>{text}</code></pre></div>)}<p class="text-sm text-slate-500">These templates are ready to copy once canonical publication metadata replaces the placeholders.</p></div></Section></BaseLayout>

@@ -1,0 +1,7 @@
+{
+  "name": "Artificial Algae Algorithm",
+  "acronym": "AAA",
+  "summary": "A nature-inspired metaheuristic optimization algorithm motivated by the growth, adaptation, and movement of algal colonies.",
+  "applications": ["Engineering design optimization", "Feature selection", "Machine learning parameter tuning", "Scheduling and decision support"],
+  "implementations": ["Reference implementation materials", "Research prototypes", "Community adaptations"]
+}

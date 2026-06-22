@@ -1,0 +1,5 @@
+[
+  { "title": "Privacy-Aware Medical AI", "role": "Principal Investigator", "fundingBody": "To be added", "year": "2025-", "description": "Placeholder research project on collaborative learning for medical imaging.", "keywords": ["federated learning", "medical AI"], "outputs": ["Model prototype", "Research publication"], "status": "Ongoing", "featured": true },
+  { "title": "Industrial AI Decision Support", "role": "Researcher", "fundingBody": "To be added", "year": "2024-", "description": "Placeholder project applying data-driven optimization to industrial processes.", "keywords": ["decision support", "industrial AI"], "outputs": ["Decision-support framework"], "status": "Ongoing", "featured": true },
+  { "title": "Artificial Algae Algorithm", "role": "Algorithm Developer", "fundingBody": "Independent research", "year": "2015-", "description": "Metaheuristic optimization research inspired by algal colony dynamics.", "keywords": ["metaheuristics", "optimization", "AAA"], "outputs": ["Algorithm framework", "Implementation resources"], "status": "Research", "featured": true }
+]

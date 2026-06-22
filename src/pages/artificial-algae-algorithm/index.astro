@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'; import PageTitle from '../../components/PageTitle.astro'; import Section from '../../components/Section.astro'; import Card from '../../components/Card.astro'; import aaa from '../../data/aaa-info.json';
+---
+<BaseLayout title="Artificial Algae Algorithm"><PageTitle title="Artificial Algae Algorithm" description={aaa.summary} />
+<Section title="Overview"><p class="max-w-3xl leading-8">The Artificial Algae Algorithm (AAA) is a population-based metaheuristic designed for global optimization. Candidate solutions are represented as algal colonies whose growth and adaptation guide the exploration of a search space.</p></Section>
+<Section title="Motivation" class="bg-white"><p class="max-w-3xl leading-8">Many optimization problems have complex landscapes, constraints, and local optima. AAA offers a flexible nature-inspired framework for balancing wide exploration with focused improvement.</p></Section>
+<Section title="Biological inspiration"><p class="max-w-3xl leading-8">The algorithm draws its conceptual inspiration from algae: their growth, adaptation to environmental conditions, and movement in response to resources. These behaviors are abstracted into computational search operators.</p></Section>
+<Section title="Algorithmic mechanism"><div class="grid gap-4 md:grid-cols-3"><Card><h3 class="font-semibold text-navy-900">1. Initialize</h3><p class="mt-2 text-sm leading-6">Create a diverse population of candidate colonies.</p></Card><Card><h3 class="font-semibold text-navy-900">2. Evaluate & adapt</h3><p class="mt-2 text-sm leading-6">Measure fitness and update colony properties according to solution quality.</p></Card><Card><h3 class="font-semibold text-navy-900">3. Improve</h3><p class="mt-2 text-sm leading-6">Generate new positions, retain promising solutions, and iterate to convergence.</p></Card></div></Section>
+<Section title="Algorithm flow" class="bg-white"><ol class="max-w-3xl list-decimal space-y-2 pl-5 leading-7"><li>Define the objective function and constraints.</li><li>Initialize colonies and calculate their fitness values.</li><li>Update colony behavior using growth, adaptation, and movement rules.</li><li>Evaluate candidates and preserve the best solution found.</li><li>Repeat until the stopping criterion is satisfied.</li></ol></Section>
+<Section title="Pseudocode"><pre class="overflow-x-auto rounded-lg bg-navy-900 p-5 text-sm leading-7 text-slate-100"><code>Initialize algae colony population
+Evaluate fitness of each colony
+while termination criterion is not met:
+    Update colony size and adaptation values
+    Generate new candidate positions
+    Evaluate candidate fitness
+    Select and retain improved colonies
+    Record the best solution
+return best solution</code></pre></Section>
+<Section title="Applications"><ul class="grid gap-3 sm:grid-cols-2">{aaa.applications.map(item => <li class="rounded border border-slate-200 bg-white p-4">{item}</li>)}</ul></Section>
+<Section title="Implementations" class="bg-white"><ul class="grid gap-3 sm:grid-cols-3">{aaa.implementations.map(item => <li class="rounded border border-slate-200 p-4">{item}</li>)}</ul></Section>
+<Section title="Citation & resources"><p class="mb-5 max-w-3xl leading-7">Please cite the canonical AAA publication when using the algorithm in scholarly work. The citation material and implementation links below are maintained as dedicated resources.</p><div class="flex flex-wrap gap-3"><a href="/artificial-algae-algorithm/code" class="rounded bg-navy-800 px-4 py-2 font-semibold text-white no-underline">AAA Code</a><a href="/artificial-algae-algorithm/citations" class="rounded border border-navy-800 px-4 py-2 font-semibold no-underline">AAA Citations</a><a href="/artificial-algae-algorithm/how-to-cite" class="rounded border border-navy-800 px-4 py-2 font-semibold no-underline">How to Cite AAA</a></div></Section>
+</BaseLayout>

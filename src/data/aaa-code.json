@@ -1,0 +1,4 @@
+[
+  { "language": "MATLAB", "title": "AAA reference implementation", "description": "Placeholder for an official MATLAB implementation and usage instructions.", "url": "https://github.com/sauymaz", "repository": "https://github.com/sauymaz" },
+  { "language": "Python", "title": "AAA Python implementation", "description": "Placeholder for a Python implementation or research prototype.", "url": "https://github.com/sauymaz", "repository": "https://github.com/sauymaz" }
+]

@@ -1,0 +1,22 @@
+---
+import profile from '../data/profile.json';
+const nav = [
+  ['Home', '/'], ['About', '/about'], ['Research', '/research'], ['Publications', '/publications'],
+  ['Projects', '/projects'], ['Teaching', '/teaching'], ['AAA', '/artificial-algae-algorithm'], ['Contact', '/contact']
+];
+const current = Astro.url.pathname;
+---
+<header class="border-b border-slate-200 bg-white">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="/" class="no-underline"><span class="block text-base font-bold text-navy-900">{profile.name}</span><span class="block text-xs text-slate-500">{profile.department}</span></a>
+    <nav class="hidden items-center gap-5 md:flex" aria-label="Main navigation">
+      {nav.map(([label, href]) => <a href={href} class:list={['text-sm font-medium no-underline', current === href ? 'text-navy-800' : 'text-slate-600']}>{label}</a>)}
+    </nav>
+    <details class="relative md:hidden">
+      <summary class="cursor-pointer rounded px-2 py-1 text-sm font-semibold text-navy-800">Menu</summary>
+      <nav class="absolute right-0 z-10 mt-2 w-48 rounded border border-slate-200 bg-white p-3 shadow-lg" aria-label="Mobile navigation">
+        {nav.map(([label, href]) => <a href={href} class="block px-2 py-2 text-sm no-underline">{label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>

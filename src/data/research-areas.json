@@ -1,0 +1,8 @@
+[
+  { "title": "Artificial Intelligence", "description": "Intelligent systems for real-world decision-making and automation.", "keywords": ["intelligent systems", "decision support", "automation"] },
+  { "title": "Machine & Deep Learning", "description": "Learning methods, representation learning, and robust model development.", "keywords": ["machine learning", "neural networks", "representation learning"] },
+  { "title": "Metaheuristic Optimization", "description": "Nature-inspired optimization, including the Artificial Algae Algorithm.", "keywords": ["AAA", "global optimization", "feature selection"] },
+  { "title": "Computer Vision", "description": "Medical image segmentation and visual data analysis.", "keywords": ["image segmentation", "medical imaging", "vision"] },
+  { "title": "Federated & Semi-supervised Learning", "description": "Privacy-aware and label-efficient collaborative learning.", "keywords": ["federated learning", "privacy", "few labels"] },
+  { "title": "Industrial AI", "description": "Data science and decision-support systems for industrial applications.", "keywords": ["data science", "optimization", "industry"] }
+]

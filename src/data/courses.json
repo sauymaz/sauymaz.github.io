@@ -1,0 +1,6 @@
+[
+  { "code": "CENG 3XX", "title": "Artificial Intelligence", "level": "Undergraduate", "language": "English / Turkish", "description": "Foundations of intelligent agents, search, and knowledge-based systems.", "topics": ["search", "knowledge representation", "intelligent agents"], "term": "Placeholder" },
+  { "code": "CENG 4XX", "title": "Machine Learning", "level": "Undergraduate", "language": "English / Turkish", "description": "Core supervised and unsupervised learning methods for data-driven applications.", "topics": ["classification", "clustering", "model evaluation"], "term": "Placeholder" },
+  { "code": "CENG 5XX", "title": "Metaheuristic Optimization", "level": "Graduate", "language": "English", "description": "Nature-inspired optimization methods and their research applications.", "topics": ["global optimization", "AAA", "benchmarking"], "term": "Placeholder" },
+  { "code": "CENG 6XX", "title": "Advanced Machine Learning Research", "level": "PhD", "language": "English", "description": "Research-focused study of advanced machine learning methods and experimental design.", "topics": ["deep learning", "research methods", "reproducibility"], "term": "Placeholder" }
+]
