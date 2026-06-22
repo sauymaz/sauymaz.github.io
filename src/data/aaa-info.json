@@ -1,7 +1,9 @@
 {
   "name": "Artificial Algae Algorithm",
   "acronym": "AAA",
-  "summary": "A nature-inspired metaheuristic optimization algorithm motivated by the growth, adaptation, and movement of algal colonies.",
-  "applications": ["Engineering design optimization", "Feature selection", "Machine learning parameter tuning", "Scheduling and decision support"],
-  "implementations": ["Reference implementation materials", "Research prototypes", "Community adaptations"]
+  "summary": "A bio-inspired, population-based metaheuristic optimization algorithm that models adaptive algal colonies to search complex solution spaces.",
+  "motivation": "AAA provides a flexible search framework for problems where gradients are unavailable, objective landscapes are multimodal, or practical constraints make conventional optimization difficult.",
+  "mechanism": "Each candidate solution is represented as an algal colony. Fitness-based adaptation and colony movement produce a balance between broad exploration and focused exploitation of promising regions.",
+  "applications": ["Numerical optimization", "Engineering design optimization", "Feature selection", "Machine learning parameter optimization", "Scheduling", "Industrial decision support"],
+  "implementations": ["MATLAB reference implementation", "Python reference implementation", "Research prototypes and community adaptations"]
 }

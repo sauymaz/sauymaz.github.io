@@ -6,6 +6,14 @@
   "department": "Department of Computer Engineering",
   "email": "sauymaz@ktun.edu.tr",
   "domain": "saitaliuymaz.com",
+  "academicPosition": "Associate Professor, Department of Computer Engineering, Konya Technical University",
+  "administrativeRoles": [
+    "Director, Artificial Intelligence Application and Research Center",
+    "Head, KTUN AI-Lab"
+  ],
+  "researchInterests": [
+    "Artificial Intelligence", "Machine Learning", "Deep Learning", "Metaheuristic Optimization", "Artificial Algae Algorithm", "Federated Learning", "Semi-supervised Learning", "Medical Image Segmentation", "Data Science", "Decision Support Systems", "Industrial AI Applications"
+  ],
   "profiles": {
     "googleScholar": "https://scholar.google.com/citations?user=Y-lwVIYAAAAJ&hl=tr",
     "orcid": "https://orcid.org/0000-0003-2748-8483",

@@ -73,6 +73,16 @@ Structured content is stored in `src/data/`:
 
 The publication, project, course, code, and citation records currently include clearly marked placeholder data. Replace them with verified records before public release. Extended Markdown material can live in `src/content/`.
 
+### Updating website content
+
+- **Profile:** Edit `src/data/profile.json` to update identity, affiliation, roles, research interests, contact details, and academic profile links.
+- **Publications:** Add or replace records in `src/data/publications.json`. The Publications page sorts records by year and is ready for future YOK Akademik data exports.
+- **Projects:** Maintain research and funding records in `src/data/projects.json`.
+- **Courses:** Update course cards and their topics in `src/data/courses.json`.
+- **AAA citations:** Add verified Artificial Algae Algorithm citations in `src/data/aaa-citations.json`; implementation links are held in `src/data/aaa-code.json`.
+
+After an update, use `npm run dev` to review the site locally or `npm run build` to generate the production-ready static output.
+
 ## GitHub Pages deployment
 
 1. Commit and push the project to the `main` branch on GitHub.

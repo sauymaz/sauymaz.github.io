@@ -1,8 +1,13 @@
 [
-  { "title": "Artificial Intelligence", "description": "Intelligent systems for real-world decision-making and automation.", "keywords": ["intelligent systems", "decision support", "automation"] },
-  { "title": "Machine & Deep Learning", "description": "Learning methods, representation learning, and robust model development.", "keywords": ["machine learning", "neural networks", "representation learning"] },
-  { "title": "Metaheuristic Optimization", "description": "Nature-inspired optimization, including the Artificial Algae Algorithm.", "keywords": ["AAA", "global optimization", "feature selection"] },
-  { "title": "Computer Vision", "description": "Medical image segmentation and visual data analysis.", "keywords": ["image segmentation", "medical imaging", "vision"] },
-  { "title": "Federated & Semi-supervised Learning", "description": "Privacy-aware and label-efficient collaborative learning.", "keywords": ["federated learning", "privacy", "few labels"] },
-  { "title": "Industrial AI", "description": "Data science and decision-support systems for industrial applications.", "keywords": ["data science", "optimization", "industry"] }
+  { "title": "Artificial Intelligence", "description": "Intelligent methods for perception, reasoning, decision-making, and responsible automation.", "keywords": ["intelligent systems", "reasoning", "decision support"] },
+  { "title": "Machine Learning", "description": "Data-driven predictive and descriptive modelling for scientific and applied problems.", "keywords": ["classification", "regression", "model evaluation"] },
+  { "title": "Deep Learning", "description": "Representation learning with deep neural architectures for complex and high-dimensional data.", "keywords": ["neural networks", "representation learning", "deep models"] },
+  { "title": "Metaheuristic Optimization", "description": "Robust nature-inspired search methods for complex, nonlinear, and constrained optimization tasks.", "keywords": ["global optimization", "nature-inspired search", "feature selection"] },
+  { "title": "Artificial Algae Algorithm", "description": "Bio-inspired population-based optimization based on the adaptive behaviour of algal colonies.", "keywords": ["AAA", "algal colonies", "exploration and exploitation"] },
+  { "title": "Federated Learning", "description": "Collaborative model training that supports distributed data ownership and privacy-aware learning.", "keywords": ["privacy", "distributed learning", "collaboration"] },
+  { "title": "Semi-supervised Learning", "description": "Learning approaches that combine limited labelled data with abundant unlabelled data.", "keywords": ["label efficiency", "pseudo-labelling", "representation learning"] },
+  { "title": "Medical Image Segmentation", "description": "Computational analysis and segmentation of medical images to support clinical research workflows.", "keywords": ["medical imaging", "segmentation", "computer vision"] },
+  { "title": "Data Science", "description": "Data analysis, modelling, and interpretation for evidence-based insight and decision-making.", "keywords": ["data analytics", "visualization", "predictive modelling"] },
+  { "title": "Decision Support Systems", "description": "AI-enabled systems that support transparent, data-informed operational decisions.", "keywords": ["decision analysis", "optimization", "analytics"] },
+  { "title": "Industrial AI Applications", "description": "Applied AI and optimization methods for industrial processes, quality, and operational intelligence.", "keywords": ["industry 4.0", "process optimization", "applied AI"] }
 ]

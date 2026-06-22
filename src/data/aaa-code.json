@@ -1,4 +1,4 @@
 [
-  { "language": "MATLAB", "title": "AAA reference implementation", "description": "Placeholder for an official MATLAB implementation and usage instructions.", "url": "https://github.com/sauymaz", "repository": "https://github.com/sauymaz" },
-  { "language": "Python", "title": "AAA Python implementation", "description": "Placeholder for a Python implementation or research prototype.", "url": "https://github.com/sauymaz", "repository": "https://github.com/sauymaz" }
+  { "language": "MATLAB", "title": "AAA MATLAB reference implementation", "description": "A MATLAB reference implementation and usage guide will be provided through the public AAA repository.", "url": "https://github.com/sauymaz/artificial-algae-algorithm", "repository": "https://github.com/sauymaz/artificial-algae-algorithm" },
+  { "language": "Python", "title": "AAA Python reference implementation", "description": "A Python implementation and reproducible examples will be provided through the public AAA repository.", "url": "https://github.com/sauymaz/artificial-algae-algorithm", "repository": "https://github.com/sauymaz/artificial-algae-algorithm" }
 ]
