@@ -75,10 +75,11 @@ The publication, project, course, code, and citation records currently include c
 
 ## GitHub Pages deployment
 
-1. Push this repository to GitHub.
-2. In repository settings, enable **Pages** using **GitHub Actions** as the source.
-3. A GitHub Actions workflow is included at `.github/workflows/deploy.yml`; it installs dependencies, runs `npm run build`, and deploys `./dist`.
-4. If deploying to a project site such as `https://username.github.io/repository/`, add `base: '/repository'` in `astro.config.mjs`. Do not add it for a user/organization site or the custom domain.
-5. Configure `saitaliuymaz.com` in the GitHub Pages custom-domain setting and set the necessary DNS records at the domain provider.
+1. Commit and push the project to the `main` branch on GitHub.
+2. In the repository's **Settings > Pages**, choose **GitHub Actions** as the build and deployment source.
+3. The included `.github/workflows/deploy.yml` workflow runs on each push to `main` (and can be started manually). It uses Node.js 20, runs `npm ci` and `npm run build`, then deploys the generated `dist/` directory.
+4. After the first successful run, open the repository's **Actions** or **Pages** page to find the deployed URL.
+5. If deploying to a project site such as `https://username.github.io/repository/`, add `base: '/repository'` in `astro.config.mjs`. Do not add it for a user/organization site or the custom domain.
+6. Configure `saitaliuymaz.com` in the GitHub Pages custom-domain setting and set the necessary DNS records at the domain provider.
 
 The current `site` value in `astro.config.mjs` is already set to `https://saitaliuymaz.com`, and the project uses Astro static output, so it does not require a server or database.
