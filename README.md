@@ -81,6 +81,8 @@ The publication, project, course, code, and citation records currently include c
 - **Courses:** Update course cards and their topics in `src/data/courses.json`.
 - **AAA citations:** Add verified Artificial Algae Algorithm citations in `src/data/aaa-citations.json`; implementation links are held in `src/data/aaa-code.json`.
 
+The AAA section currently includes the verified original 2015 publication in *Applied Soft Computing*. Link readers to its DOI or ScienceDirect record; do not add the article PDF to the website unless copyright permissions allow redistribution.
+
 After an update, use `npm run dev` to review the site locally or `npm run build` to generate the production-ready static output.
 
 ### Website images

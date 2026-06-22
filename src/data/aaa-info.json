@@ -1,9 +1,26 @@
 {
   "name": "Artificial Algae Algorithm",
   "acronym": "AAA",
-  "summary": "A bio-inspired, population-based metaheuristic optimization algorithm that models adaptive algal colonies to search complex solution spaces.",
-  "motivation": "AAA provides a flexible search framework for problems where gradients are unavailable, objective landscapes are multimodal, or practical constraints make conventional optimization difficult.",
-  "mechanism": "Each candidate solution is represented as an algal colony. Fitness-based adaptation and colony movement produce a balance between broad exploration and focused exploitation of promising regions.",
-  "applications": ["Numerical optimization", "Engineering design optimization", "Feature selection", "Machine learning parameter optimization", "Scheduling", "Industrial decision support"],
-  "implementations": ["MATLAB reference implementation", "Python reference implementation", "Research prototypes and community adaptations"]
+  "subtitle": "A bio-inspired metaheuristic algorithm for nonlinear global optimization",
+  "summary": "A bio-inspired population-based metaheuristic optimization algorithm inspired by selected living behaviours of microalgae.",
+  "publication": {
+    "title": "Artificial algae algorithm (AAA) for nonlinear global optimization",
+    "authors": "Sait Ali Uymaz, Gulay Tezel, Esra Yel",
+    "journal": "Applied Soft Computing",
+    "volume": "31",
+    "pages": "153-171",
+    "year": 2015,
+    "doi": "10.1016/j.asoc.2015.03.003",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494615001465"
+  },
+  "motivation": "AAA was proposed for nonlinear global optimization, where objective landscapes may be complex, multimodal, or constrained.",
+  "mechanism": "Artificial algae colonies represent candidate solutions. Helical movement, evolutionary change, and adaptation combine to balance exploration and exploitation through fitness-based behaviour.",
+  "components": [
+    { "title": "Helical Movement", "description": "Colonies move toward a light source through energy-dependent helical movement. Shear force and friction surface influence the movement, supporting a balance between exploration and exploitation." },
+    { "title": "Evolutionary Process", "description": "Colony growth is related to fitness and nutrient availability, with inspiration from the Monod model. Larger colonies represent better solutions, and the smallest colony may receive replicated cells from the largest colony." },
+    { "title": "Adaptation Process", "description": "Starvation-based adaptation allows insufficiently grown colonies to try to resemble the largest colony. An adaptation parameter controls this process." }
+  ],
+  "benchmarking": ["CEC'05 benchmark function set", "Unimodal, multimodal, and hybrid functions", "10, 30, and 50 dimensions", "30 independent runs", "Comparison with ABC, BA, DE, ACOR, and HSPOP", "Pressure vessel design optimization compared with ABC and SPSO2011"],
+  "applications": ["Nonlinear global optimization", "Numerical optimization", "Engineering design optimization", "Constrained optimization", "Pressure vessel design optimization", "Feature selection", "Machine learning parameter optimization", "Scheduling and decision support problems"],
+  "implementations": ["MATLAB implementation", "Python implementation"]
 }

@@ -1,13 +1,18 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'; import PageTitle from '../../components/PageTitle.astro'; import Section from '../../components/Section.astro';
-const bibtex = `@article{uymaz_aaa,
-  author  = {Uymaz, Sait Ali},
-  title   = {Artificial Algae Algorithm (AAA): A Novel Metaheuristic Algorithm for Global Optimization},
-  year    = {YYYY},
-  journal = {Journal name},
-  note    = {Replace this placeholder with canonical metadata}
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageTitle from '../../components/PageTitle.astro';
+import Section from '../../components/Section.astro';
+const apa = 'Uymaz, S. A., Tezel, G., & Yel, E. (2015). Artificial algae algorithm (AAA) for nonlinear global optimization. Applied Soft Computing, 31, 153-171. https://doi.org/10.1016/j.asoc.2015.03.003';
+const ieee = 'S. A. Uymaz, G. Tezel, and E. Yel, "Artificial algae algorithm (AAA) for nonlinear global optimization," Applied Soft Computing, vol. 31, pp. 153-171, 2015, doi: 10.1016/j.asoc.2015.03.003.';
+const bibtex = `@article{Uymaz2015ArtificialAlgaeAlgorithm,
+  title = {Artificial algae algorithm (AAA) for nonlinear global optimization},
+  author = {Uymaz, Sait Ali and Tezel, Gulay and Yel, Esra},
+  journal = {Applied Soft Computing},
+  volume = {31},
+  pages = {153--171},
+  year = {2015},
+  doi = {10.1016/j.asoc.2015.03.003},
+  publisher = {Elsevier}
 }`;
-const apa = 'Uymaz, S. A. (YYYY). Artificial Algae Algorithm (AAA): A novel metaheuristic algorithm for global optimization. Journal name.';
-const ieee = 'S. A. Uymaz, "Artificial Algae Algorithm (AAA): A Novel Metaheuristic Algorithm for Global Optimization," Journal name, YYYY.';
 ---
-<BaseLayout title="How to Cite AAA"><PageTitle title="How to Cite AAA" description="Citation guidance for users of the Artificial Algae Algorithm." /><Section><div class="max-w-3xl space-y-6 leading-8"><p>When using AAA in research, please cite the original canonical publication. Verify the final authorship, venue, volume, pages, and DOI against the official publication record.</p>{[['APA', apa], ['IEEE', ieee], ['BibTeX', bibtex]].map(([format, text]) => <div><h2 class="mb-3 font-serif text-2xl font-bold text-navy-900">{format}</h2><pre class="overflow-x-auto rounded-lg bg-navy-900 p-5 text-sm leading-7 text-slate-100"><code>{text}</code></pre></div>)}<p class="text-sm text-slate-500">These templates are ready to copy once canonical publication metadata replaces the placeholders.</p></div></Section></BaseLayout>
+<BaseLayout title="How to Cite AAA" description="Citation formats for the original 2015 Artificial Algae Algorithm publication."><PageTitle title="How to Cite AAA" description="Citation formats for the original Artificial Algae Algorithm publication." /><Section><div class="max-w-4xl space-y-6 leading-8"><p>Please cite the original publication when using AAA in research. The publication details below are verified; use the DOI or ScienceDirect page rather than redistributing the article PDF unless copyright permissions allow it.</p>{[['APA', apa], ['IEEE', ieee], ['BibTeX', bibtex]].map(([format, text]) => <div><h2 class="mb-3 font-serif text-2xl font-bold text-navy-900">{format}</h2><pre class="overflow-x-auto rounded-lg bg-navy-900 p-5 text-sm leading-7 text-slate-100"><code>{text}</code></pre></div>)}</div></Section></BaseLayout>
