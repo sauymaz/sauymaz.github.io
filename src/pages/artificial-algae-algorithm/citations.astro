@@ -1,4 +1,67 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'; import PageTitle from '../../components/PageTitle.astro'; import Section from '../../components/Section.astro'; import Card from '../../components/Card.astro'; import citations from '../../data/aaa-citations.json';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageTitle from '../../components/PageTitle.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import citations from '../../data/aaa-citations.json';
+
+interface CitationRecord {
+  id: string;
+  year: number;
+  title: string;
+  authors: string;
+  venue: string;
+  publicationType: 'Journal Article' | 'Conference Paper' | 'Review Article' | 'Thesis' | 'Book Chapter' | 'Other';
+  doi?: string;
+  url?: string;
+  applicationArea: string;
+  usageType: 'Cites AAA' | 'Uses AAA' | 'Improves AAA' | 'Compares with AAA' | 'Hybridizes AAA' | 'Reviews AAA';
+  notes?: string;
+  source?: string;
+  verified: boolean;
+}
+
+const citationRecords = citations as CitationRecord[];
+const verifiedCitations = citationRecords.filter((citation) => citation.verified);
+const sortedCitations = [...verifiedCitations].sort((a, b) => b.year - a.year);
 ---
-<BaseLayout title="AAA Citations" description="Original publication and citation information for the Artificial Algae Algorithm."><PageTitle title="AAA Citations" description="Original publication and citation information for the Artificial Algae Algorithm." /><Section><div class="space-y-4">{citations.map(citation => <Card><p class="text-sm font-semibold text-navy-600">Original publication · {citation.year}</p><h2 class="mt-2 text-lg font-semibold text-navy-900">{citation.title}</h2><p class="mt-2">{citation.authors}</p><p class="mt-1 italic text-slate-600">{citation.journal}, vol. {citation.volume}, pp. {citation.pages}</p><p class="mt-3 text-sm leading-6 text-slate-600">{citation.note}</p><div class="mt-4 flex flex-wrap gap-4 text-sm"><a href={`https://doi.org/${citation.doi}`} target="_blank" rel="noreferrer">DOI: {citation.doi} ↗</a><a href={citation.url} target="_blank" rel="noreferrer">ScienceDirect ↗</a></div></Card>)}</div><p class="mt-8 text-sm text-slate-500">Additional studies using AAA can be added to <code>src/data/aaa-citations.json</code> as verified records become available.</p></Section></BaseLayout>
+<BaseLayout title="AAA Citations" description="Curated and verified studies that cite, use, improve, compare with, hybridize, or review the Artificial Algae Algorithm.">
+  <PageTitle title="AAA Citations" description="Subsequent studies related to the Artificial Algae Algorithm." />
+  <Section>
+    <div class="max-w-4xl space-y-4 leading-7">
+      <p>This curated list includes studies that cite, use, improve, compare with, hybridize, or review the Artificial Algae Algorithm. The list is maintained manually using academic indexing sources such as Google Scholar, Web of Science, Scopus, Semantic Scholar, Crossref, and publisher databases.</p>
+      <p class="text-sm text-slate-600">The original AAA paper itself is listed on the Publications page and in the How to Cite section; this page focuses on subsequent studies related to AAA.</p>
+    </div>
+
+    {sortedCitations.length > 0 ? (
+      <div class="mt-8 space-y-5">
+        {sortedCitations.map((citation) => <Card>
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p class="text-sm font-semibold text-navy-600">{citation.year}</p>
+              <h2 class="mt-1 font-serif text-xl font-bold text-navy-900">{citation.title}</h2>
+            </div>
+            <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-800">Verified</span>
+          </div>
+          <p class="mt-3">{citation.authors}</p>
+          <p class="mt-1 italic text-slate-600">{citation.venue}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-navy-50 px-3 py-1 text-xs font-medium text-navy-800">{citation.usageType}</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">{citation.applicationArea}</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">{citation.publicationType}</span>
+          </div>
+          {citation.notes && <p class="mt-4 text-sm leading-6 text-slate-600">{citation.notes}</p>}
+          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {citation.doi && <a href={`https://doi.org/${citation.doi}`} target="_blank" rel="noreferrer">DOI: {citation.doi} ↗</a>}
+            {citation.url && <a href={citation.url} target="_blank" rel="noreferrer">Publication link ↗</a>}
+          </div>
+          {citation.source && <p class="mt-4 border-t border-slate-100 pt-3 text-xs text-slate-500">Source: {citation.source}</p>}
+        </Card>)}
+      </div>
+    ) : (
+      <div class="mt-8 rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">
+        Studies citing, using, improving, comparing with, hybridizing, or reviewing the Artificial Algae Algorithm will be listed here after verification.
+      </div>
+    )}
+  </Section>
+</BaseLayout>
