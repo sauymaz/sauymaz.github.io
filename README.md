@@ -85,6 +85,18 @@ The AAA section currently includes the verified original 2015 publication in *Ap
 
 After an update, use `npm run dev` to review the site locally or `npm run build` to generate the production-ready static output.
 
+## Updating Academic Data
+
+For a repeatable manual import workflow, use the templates in `imports/yok-akademik/`. They are designed for data copied manually from YOK Akademik, Excel, or CSV exports; the website never scrapes or fetches YOK Akademik data at runtime.
+
+```bash
+python scripts/import-publications-from-csv.py
+python scripts/import-projects-from-csv.py
+python scripts/import-academic-experience-from-csv.py
+```
+
+The scripts use only the Python standard library, write UTF-8 JSON into `src/data/`, and report how many records were imported. See `imports/yok-akademik/README.md` for the CSV schemas, data-entry guidance, build instructions, and GitHub Pages deployment flow.
+
 ### Website images
 
 Optional static images are served from `public/images/`:
