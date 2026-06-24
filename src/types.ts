@@ -1,15 +1,20 @@
 export interface Publication {
   id: string;
   year: number;
-  type: string;
+  category: string;
+  publicationType: string;
   title: string;
   authors: string;
   venue: string;
+  publisher?: string;
+  editors?: string;
   volume?: string;
   issue?: string;
   pages?: string;
   doi?: string;
   url?: string;
+  isbn?: string;
+  presentationType?: string;
   keywords?: string[];
   featured?: boolean;
   source?: string;

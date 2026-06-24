@@ -1,1 +1,1 @@
-id,year,type,title,authors,venue,volume,issue,pages,doi,url,keywords,featured,source
+id,year,category,publicationType,title,authors,venue,publisher,editors,volume,issue,pages,doi,url,isbn,presentationType,keywords,featured,source

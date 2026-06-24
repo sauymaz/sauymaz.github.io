@@ -11,6 +11,14 @@ This folder supports a manual, reviewable workflow for maintaining the static we
 5. Use `true`, `false`, `yes`, `no`, `1`, or `0` for `featured` values.
 6. Review author names, years, DOI values, URLs, and sources before importing.
 
+The expected `publications.csv` columns are:
+
+```text
+id,year,category,publicationType,title,authors,venue,publisher,editors,volume,issue,pages,doi,url,isbn,presentationType,keywords,featured,source
+```
+
+Publication records are grouped on the site only as Articles, Conference Papers, and Books & Book Chapters. No international/national scope is stored or displayed; an extra legacy `scope` column, if present in an older CSV, is ignored by the importer.
+
 ## Import CSV data
 
 Run these commands from the repository root with Python 3:
