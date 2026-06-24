@@ -1,5 +1,5 @@
 ---
 interface Props { class?: string }
-const { class: className = '' } = Astro.props;
+const { class: className = '', ...attributes } = Astro.props;
 ---
-<article class:list={['rounded-lg border border-slate-200 bg-white p-6 shadow-sm', className]}><slot /></article>
+<article {...attributes} class:list={['rounded-lg border border-slate-200 bg-white p-6 shadow-sm', className]}><slot /></article>
