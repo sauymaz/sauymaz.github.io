@@ -1,1 +1,189 @@
-[]
+[
+  {
+    "id": "project-007",
+    "title": "Kısmi Etiketli Medikal Verilerde Derin Öğrenme Modelleri İçin Yenilikçi Bir Yarı-Denetimli Öğrenme Yaklaşımı",
+    "projectType": "TÜBİTAK 1002 Project",
+    "fundingSource": "TÜBİTAK",
+    "role": "Principal Investigator",
+    "startDate": "2025-08-15",
+    "endDate": "",
+    "status": "Ongoing",
+    "keywords": [
+      "Semi-supervised Learning",
+      "Deep Learning",
+      "Medical Imaging",
+      "Partially Labeled Data",
+      "Medical Image Segmentation"
+    ],
+    "featured": true,
+    "source": "CV"
+  },
+  {
+    "id": "project-008",
+    "title": "Federe Yarı-Denetimli Derin Öğrenme Yöntemleri ile Mahremiyet Farkında Medikal Görüntü Segmentasyonu",
+    "projectType": "TÜBİTAK 1002 Project",
+    "fundingSource": "TÜBİTAK",
+    "role": "Principal Investigator",
+    "startDate": "2025-08-15",
+    "endDate": "",
+    "status": "Ongoing",
+    "keywords": [
+      "Federated Learning",
+      "Semi-supervised Learning",
+      "Deep Learning",
+      "Privacy-preserving AI",
+      "Medical Image Segmentation"
+    ],
+    "featured": true,
+    "source": "CV"
+  },
+  {
+    "id": "project-005",
+    "title": "Yapay Zeka Tabanlı Yeni Nesil Şerit Testereli Metal Kesme Makinelerinde İzlenebilirlik, Verimlilik ve Kestirimci Bakım Projesi",
+    "projectType": "TÜBİTAK 1711 Project",
+    "fundingSource": "TÜBİTAK",
+    "role": "Researcher",
+    "startDate": "2024-01-01",
+    "endDate": "2026-01-01",
+    "status": "Ongoing",
+    "keywords": [
+      "Artificial Intelligence",
+      "Predictive Maintenance",
+      "Band Saw Machines",
+      "Industrial AI",
+      "Traceability",
+      "Efficiency"
+    ],
+    "featured": true,
+    "source": "CV"
+  },
+  {
+    "id": "project-009",
+    "title": "Yapay Zeka Destekli Nakit Akışı ve Finansal Planlama Projesi",
+    "projectType": "TÜBİTAK 1711 Project",
+    "fundingSource": "TÜBİTAK",
+    "role": "Researcher",
+    "startDate": "2022-10-01",
+    "endDate": "2024-04-01",
+    "status": "Completed",
+    "keywords": [
+      "Artificial Intelligence",
+      "Cash Flow",
+      "Financial Planning",
+      "Machine Learning",
+      "Decision Support"
+    ],
+    "featured": true,
+    "source": "CV"
+  },
+  {
+    "id": "project-010",
+    "title": "Derin Öğrenme Tekniklerini Kullanarak Tüberkülozun Otomatik Teşhisi",
+    "projectType": "Higher Education Institution Supported Scientific Research Project",
+    "fundingSource": "Higher Education Institutions",
+    "role": "Principal Investigator",
+    "startDate": "2019-05-09",
+    "endDate": "2020-11-30",
+    "status": "Completed",
+    "keywords": [
+      "Deep Learning",
+      "Tuberculosis Diagnosis",
+      "Medical Image Analysis",
+      "Computer-aided Diagnosis",
+      "Healthcare AI"
+    ],
+    "featured": false,
+    "source": "CV"
+  },
+  {
+    "id": "project-001",
+    "title": "Optimizasyon Problemlerinin Çözümünde Mikro Yapay Alg Algoritmasının Geliştirilmesi",
+    "projectType": "Higher Education Institution Supported Scientific Research Project",
+    "fundingSource": "Higher Education Institutions",
+    "role": "Principal Investigator",
+    "startDate": "2019-05-09",
+    "endDate": "2023-07-09",
+    "status": "Completed",
+    "keywords": [
+      "Micro Artificial Algae Algorithm",
+      "Metaheuristic Optimization",
+      "Optimization Problems",
+      "Artificial Algae Algorithm"
+    ],
+    "featured": false,
+    "source": "CV"
+  },
+  {
+    "id": "project-004",
+    "title": "Büyük Ölçekli Optimizasyon Problemlerinin Çözümünde Yeni Yaklaşımlar",
+    "projectType": "Higher Education Institution Supported Scientific Research Project",
+    "fundingSource": "Higher Education Institutions",
+    "role": "Principal Investigator",
+    "startDate": "2018-06-28",
+    "endDate": "2023-06-09",
+    "status": "Completed",
+    "keywords": [
+      "Large-scale Global Optimization",
+      "Metaheuristic Optimization",
+      "Optimization Algorithms",
+      "Computational Intelligence"
+    ],
+    "featured": false,
+    "source": "CV"
+  },
+  {
+    "id": "project-003",
+    "title": "Çok Amaçlı Optimizasyon Problemlerinin Çözümü için Çok Amaçlı Yapay Alg Algoritmasının Geliştirilmesi",
+    "projectType": "Higher Education Institution Supported Scientific Research Project",
+    "fundingSource": "Higher Education Institutions",
+    "role": "Principal Investigator",
+    "startDate": "2018-02-22",
+    "endDate": "2019-06-27",
+    "status": "Completed",
+    "keywords": [
+      "Multi-objective Optimization",
+      "Artificial Algae Algorithm",
+      "Metaheuristic Optimization",
+      "Optimization Algorithms"
+    ],
+    "featured": false,
+    "source": "CV"
+  },
+  {
+    "id": "project-002",
+    "title": "Yeni Bir Biyolojik İlhamlı Metasezgisel Optimizasyon Metodu Yapay Alg Algoritması",
+    "projectType": "Higher Education Institution Supported Scientific Research Project",
+    "fundingSource": "Higher Education Institutions",
+    "role": "Scholar",
+    "startDate": "2013-06-19",
+    "endDate": "2015-12-30",
+    "status": "Completed",
+    "keywords": [
+      "Artificial Algae Algorithm",
+      "Bio-inspired Optimization",
+      "Metaheuristic Optimization",
+      "Global Optimization"
+    ],
+    "featured": true,
+    "source": "CV"
+  },
+  {
+    "id": "project-006",
+    "title": "Personel, Maaş ve Taşınır Mal İşlemlerini Gerçekleştiren Entegre Bilgi Yönetim Sistemi Yazılım Programı Geliştirilmesi",
+    "projectType": "National Project",
+    "fundingSource": "KOSGEB",
+    "role": "Researcher",
+    "startDate": "2010-06-01",
+    "endDate": "2011-06-01",
+    "status": "Completed",
+    "keywords": [
+      "Integrated Information Management System",
+      "Software Development",
+      "Payroll Management",
+      "Personnel Management",
+      "Asset Management"
+    ],
+    "featured": false,
+    "source": "CV"
+  }
+]

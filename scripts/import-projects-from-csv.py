@@ -29,11 +29,11 @@ def main() -> None:
             if not any(row.values()):
                 continue
             records.append({
-                "id": row["id"].strip(), "title": row["title"].strip(), "role": row["role"].strip(),
-                "category": row["category"].strip(), "fundingBody": row["fundingBody"].strip(),
-                "year": row["year"].strip(), "status": row["status"].strip(),
-                "description": row["description"].strip(), "keywords": split_values(row["keywords"]),
-                "outputs": split_values(row["outputs"]), "url": row["url"].strip(),
+                "id": row["id"].strip(), "title": row["title"].strip(),
+                "projectType": row["projectType"].strip(), "fundingSource": row["fundingSource"].strip(),
+                "role": row["role"].strip(), "startDate": row["startDate"].strip(),
+                "endDate": row["endDate"].strip(), "status": row["status"].strip(),
+                "keywords": split_values(row["keywords"]),
                 "featured": parse_bool(row["featured"]), "source": row["source"].strip(),
             })
     args.output.parent.mkdir(parents=True, exist_ok=True)

@@ -23,15 +23,13 @@ export interface Publication {
 export interface Project {
   id: string;
   title: string;
+  projectType?: string;
+  fundingSource?: string;
   role?: string;
-  category?: string;
-  fundingBody?: string;
-  year?: string;
+  startDate?: string;
+  endDate?: string;
   status?: string;
-  description?: string;
   keywords?: string[];
-  outputs?: string[];
-  url?: string;
   featured?: boolean;
   source?: string;
 }
