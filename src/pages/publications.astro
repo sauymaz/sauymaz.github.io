@@ -7,32 +7,77 @@ import publications from '../data/publications.json';
 import type { Publication } from '../types';
 
 const publicationRecords = publications as Publication[];
-const byYear = (records: Publication[]) => [...records].sort((a, b) => b.year - a.year);
-const categoryText = (publication: Publication) => publication.category.toLowerCase();
-const isConference = (publication: Publication) => categoryText(publication).includes('conference');
-const isBook = (publication: Publication) => categoryText(publication).includes('book');
-const groups = [
-  { title: 'Articles', records: byYear(publicationRecords.filter((publication) => !isConference(publication) && !isBook(publication))) },
-  { title: 'Conference Papers', records: byYear(publicationRecords.filter(isConference)) },
-  { title: 'Books & Book Chapters', records: byYear(publicationRecords.filter(isBook)) },
-];
+const sortedPublications = [...publicationRecords].sort((a, b) => b.year - a.year);
+const searchText = (publication: Publication) => [
+  publication.title, publication.authors, publication.venue, String(publication.year),
+  publication.category, publication.publicationType, ...(publication.keywords ?? []),
+].join(' ').toLowerCase();
 ---
-<BaseLayout title="Publications" description="Publications by Sait Ali UYMAZ, organised as articles, conference papers, and books or book chapters.">
+<BaseLayout title="Publications" description="Publications by Sait Ali UYMAZ, including articles, conference papers, and book chapters.">
   <PageTitle title="Publications" description="Selected scholarly work organised by publication category." />
   <Section>
-    <p class="mb-10 max-w-3xl text-sm leading-6 text-slate-600">This list is structured for future YOK Akademik imports. Update <code>src/data/publications.json</code> with verified bibliographic metadata and source information.</p>
-    <div class="space-y-12">
-      {groups.map((group) => <section>
-        <h2 class="mb-5 font-serif text-2xl font-bold text-navy-900">{group.title}</h2>
-        {group.records.length > 0 ? <div class="space-y-4">{group.records.map((publication) => <Card>
-          <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-semibold text-navy-600">{publication.year} · {publication.category}</p><h3 class="mt-1 text-lg font-semibold text-navy-900">{publication.title}</h3></div>{publication.featured && <span class="rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold text-navy-800">Featured</span>}</div>
-          <p class="mt-3">{publication.authors}</p><p class="mt-1 italic text-slate-600">{publication.venue}</p>
-          <div class="mt-3 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">{publication.publicationType}</span>{(publication.keywords ?? []).map((keyword) => <span class="rounded-full bg-navy-50 px-3 py-1 text-xs font-medium text-navy-800">{keyword}</span>)}</div>
-          {(publication.volume || publication.issue || publication.pages) && <p class="mt-4 text-sm text-slate-600">{publication.volume && `Vol. ${publication.volume}`}{publication.issue && `, Issue ${publication.issue}`}{publication.pages && `, pp. ${publication.pages}`}</p>}
-          {publication.presentationType && <p class="mt-2 text-sm text-slate-600">Presentation: {publication.presentationType}</p>}{publication.isbn && <p class="mt-2 text-sm text-slate-600">ISBN: {publication.isbn}</p>}
-          <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">{publication.doi && <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noreferrer">DOI: {publication.doi} ↗</a>}{publication.url && <a href={publication.url} target="_blank" rel="noreferrer">Publication link ↗</a>}</div>
-        </Card>)}</div> : <p class="rounded-lg border border-dashed border-slate-300 bg-white p-5 text-sm text-slate-600">Verified records will be listed here as publication data is imported.</p>}
-      </section>)}
+    <p class="mb-6 max-w-3xl text-sm leading-6 text-slate-600">This list is structured for future YOK Akademik imports. Update <code>src/data/publications.json</code> with verified bibliographic metadata and source information.</p>
+    <div class="rounded-lg border border-slate-200 bg-white p-4 sm:p-5">
+      <label class="block text-sm font-semibold text-navy-900" for="publication-search">Search publications</label>
+      <input id="publication-search" type="search" placeholder="Search title, authors, venue, year, or keywords" class="mt-2 w-full rounded border border-slate-300 px-3 py-2 text-slate-800 placeholder:text-slate-400" />
+      <div class="mt-4 flex flex-wrap gap-2" aria-label="Publication filters">
+        <button class="publication-filter rounded-full bg-navy-800 px-3 py-1.5 text-sm font-semibold text-white" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="publication-filter rounded-full border border-slate-300 px-3 py-1.5 text-sm font-semibold text-slate-700" type="button" data-filter="Article" aria-pressed="false">Articles</button>
+        <button class="publication-filter rounded-full border border-slate-300 px-3 py-1.5 text-sm font-semibold text-slate-700" type="button" data-filter="Conference Paper" aria-pressed="false">Conference Papers</button>
+        <button class="publication-filter rounded-full border border-slate-300 px-3 py-1.5 text-sm font-semibold text-slate-700" type="button" data-filter="Book Chapter" aria-pressed="false">Books &amp; Book Chapters</button>
+        <button class="publication-filter rounded-full border border-slate-300 px-3 py-1.5 text-sm font-semibold text-slate-700" type="button" data-filter="featured" aria-pressed="false">Featured</button>
+      </div>
+      <p id="publication-count" class="mt-4 text-sm text-slate-600" aria-live="polite">Showing {sortedPublications.length} of {sortedPublications.length} publications</p>
     </div>
+
+    <div id="publication-list" class="mt-8 space-y-4">
+      {sortedPublications.map((publication) => <Card class="publication-card" data-category={publication.category} data-featured={publication.featured ? 'true' : 'false'} data-search={searchText(publication)}>
+        <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-semibold text-navy-600">{publication.year} · {publication.category}</p><h2 class="mt-1 text-lg font-semibold text-navy-900">{publication.title}</h2></div>{publication.featured && <span class="rounded-full bg-navy-100 px-3 py-1 text-xs font-semibold text-navy-800">Featured</span>}</div>
+        <p class="mt-3">{publication.authors}</p><p class="mt-1 italic text-slate-600">{publication.venue}</p>
+        <div class="mt-3 flex flex-wrap gap-2"><span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">{publication.publicationType}</span>{(publication.keywords ?? []).map((keyword) => <span class="rounded-full bg-navy-50 px-3 py-1 text-xs font-medium text-navy-800">{keyword}</span>)}</div>
+        {(publication.volume || publication.issue || publication.pages) && <p class="mt-4 text-sm text-slate-600">{publication.volume && `Vol. ${publication.volume}`}{publication.issue && `, Issue ${publication.issue}`}{publication.pages && `, pp. ${publication.pages}`}</p>}
+        {publication.presentationType && <p class="mt-2 text-sm text-slate-600">Presentation: {publication.presentationType}</p>}{publication.isbn && <p class="mt-2 text-sm text-slate-600">ISBN: {publication.isbn}</p>}
+        <div class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">{publication.doi && <a href={`https://doi.org/${publication.doi}`} target="_blank" rel="noreferrer">DOI: {publication.doi} ↗</a>}{publication.url && <a href={publication.url} target="_blank" rel="noreferrer">Publication link ↗</a>}</div>
+      </Card>)}
+    </div>
+    <div id="publication-empty" class="mt-8 hidden rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">No publications match the selected filter or search query.</div>
   </Section>
 </BaseLayout>
+
+<script is:inline>
+  const buttons = Array.from(document.querySelectorAll('.publication-filter'));
+  const cards = Array.from(document.querySelectorAll('.publication-card'));
+  const searchInput = document.querySelector('#publication-search');
+  const count = document.querySelector('#publication-count');
+  const emptyState = document.querySelector('#publication-empty');
+  let activeFilter = 'all';
+
+  function updatePublications() {
+    const query = searchInput.value.trim().toLowerCase();
+    let visibleCount = 0;
+    cards.forEach((card) => {
+      const categoryMatches = activeFilter === 'all' || (activeFilter === 'featured' ? card.dataset.featured === 'true' : card.dataset.category === activeFilter);
+      const searchMatches = !query || card.dataset.search.includes(query);
+      const visible = categoryMatches && searchMatches;
+      card.classList.toggle('hidden', !visible);
+      if (visible) visibleCount += 1;
+    });
+    count.textContent = `Showing ${visibleCount} of ${cards.length} publications`;
+    emptyState.classList.toggle('hidden', visibleCount !== 0);
+  }
+
+  buttons.forEach((button) => button.addEventListener('click', () => {
+    activeFilter = button.dataset.filter;
+    buttons.forEach((item) => {
+      const active = item === button;
+      item.setAttribute('aria-pressed', String(active));
+      item.classList.toggle('bg-navy-800', active);
+      item.classList.toggle('text-white', active);
+      item.classList.toggle('border-slate-300', !active);
+      item.classList.toggle('text-slate-700', !active);
+    });
+    updatePublications();
+  }));
+  searchInput.addEventListener('input', updatePublications);
+  updatePublications();
+</script>
