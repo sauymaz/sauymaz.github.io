@@ -6,10 +6,15 @@
   "department": "Department of Computer Engineering",
   "email": "sauymaz@ktun.edu.tr",
   "domain": "saitaliuymaz.com",
-  "academicPosition": "Associate Professor, Department of Computer Engineering, Konya Technical University",
+  "academicPosition": "Associate Professor, Department of Computer Engineering, Faculty of Computer and Information Sciences, Konya Technical University",
   "administrativeRoles": [
-    "Director, Artificial Intelligence Application and Research Center",
-    "Head, KTUN AI-Lab"
+    "Director, Artificial Intelligence Application and Research Center, Konya Technical University",
+    "Head, KTÜN AI-Lab"
+  ],
+  "biography": [
+    "Assoc. Prof. Dr. Sait Ali Uymaz is an academic member of the Department of Computer Engineering, Faculty of Computer and Information Sciences, at Konya Technical University. His research focuses on artificial intelligence, machine learning, deep learning, medical image analysis, federated learning, semi-supervised learning, data science, and bio-inspired optimization algorithms.",
+    "He is the developer of the Artificial Algae Algorithm, a bio-inspired metaheuristic optimization method proposed for nonlinear global optimization problems. His academic work includes applications of computational intelligence and artificial intelligence in optimization, healthcare, industrial systems, financial planning, and decision-support problems.",
+    "In addition to his academic position, he serves as the Director of the Artificial Intelligence Application and Research Center at Konya Technical University and as the Head of KTÜN AI-Lab. Through these administrative and research leadership roles, he contributes to interdisciplinary artificial intelligence studies, university-industry collaboration, applied R&D projects, and institutional AI capacity development."
   ],
   "researchInterests": [
     "Artificial Intelligence", "Machine Learning", "Deep Learning", "Metaheuristic Optimization", "Artificial Algae Algorithm", "Federated Learning", "Semi-supervised Learning", "Medical Image Segmentation", "Data Science", "Decision Support Systems", "Industrial AI Applications"

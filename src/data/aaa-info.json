@@ -20,7 +20,6 @@
     { "title": "Evolutionary Process", "description": "Colony growth is related to fitness and nutrient availability, with inspiration from the Monod model. Larger colonies represent better solutions, and the smallest colony may receive replicated cells from the largest colony." },
     { "title": "Adaptation Process", "description": "Starvation-based adaptation allows insufficiently grown colonies to try to resemble the largest colony. An adaptation parameter controls this process." }
   ],
-  "benchmarking": ["CEC'05 benchmark function set", "Unimodal, multimodal, and hybrid functions", "10, 30, and 50 dimensions", "30 independent runs", "Comparison with ABC, BA, DE, ACOR, and HSPOP", "Pressure vessel design optimization compared with ABC and SPSO2011"],
   "applications": ["Nonlinear global optimization", "Numerical optimization", "Engineering design optimization", "Constrained optimization", "Pressure vessel design optimization", "Feature selection", "Machine learning parameter optimization", "Scheduling and decision support problems"],
   "implementations": ["MATLAB implementation", "Python implementation"]
 }
